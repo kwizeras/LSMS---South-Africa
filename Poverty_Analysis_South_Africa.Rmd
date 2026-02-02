@@ -1,0 +1,607 @@
+---
+title: "Measuring Poverty in South Africa: An Analysis Using LSMS Household Survey Data"
+author: "Sotaire Kwizera"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    highlight: tango
+    code_folding: show
+    df_print: paged
+  pdf_document:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 10,
+  fig.height = 6,
+  fig.align = "center"
+)
+```
+
+# Executive Summary
+
+This analysis examines poverty rates in South Africa using the World Bank's Living Standards Measurement Study (LSMS) household survey data. I compute multiple poverty measures following the Foster-Greer-Thorbecke (FGT) class of poverty indices, analyze poverty patterns across demographic groups, and provide visualizations to support policy recommendations.
+
+**Key Findings:**
+
+- The headcount poverty rate (P0) is approximately 38% using simple per capita income
+- Adjusting for adult equivalence scales reduces the poverty rate to approximately 33%
+- Significant disparities exist across racial groups and urban/rural locations
+- African households and rural areas face disproportionately high poverty rates
+
+---
+
+# 1. Introduction and Methodology
+
+## 1.1 Background
+
+This analysis uses data from South Africa's Living Standards Measurement Study (LSMS), a nationally representative household survey that collects detailed information on consumption, income, demographics, and living conditions. The LSMS methodology, developed by the World Bank, provides standardized approaches for measuring living standards across countries, enabling cross-country comparisons and tracking progress toward poverty reduction goals.
+
+## 1.2 The Foster-Greer-Thorbecke (FGT) Poverty Measures
+
+The FGT class of poverty indices provides a comprehensive framework for measuring poverty (Foster, Greer & Thorbecke, 1984). The general formula is:
+
+$$P_\alpha = \frac{1}{n} \sum_{i=1}^{q} \left( \frac{z - y_i}{z} \right)^\alpha$$
+
+Where:
+
+- $n$ = total population
+- $q$ = number of poor (those with income below the poverty line)
+- $z$ = poverty line
+- $y_i$ = income of individual $i$
+- $\alpha$ = sensitivity parameter
+
+The three main measures are:
+
+| Measure | $\alpha$ | Interpretation |
+|---------|----------|----------------|
+| **P0 (Headcount)** | 0 | Proportion of population living below poverty line |
+| **P1 (Poverty Gap)** | 1 | Average depth of poverty; measures how far below the line the poor are |
+| **P2 (Severity)** | 2 | Squared poverty gap; gives more weight to those furthest below the line |
+
+## 1.3 Poverty Line
+
+For this analysis, I use a poverty line of **150 South African Rand per person per month**, which was the commonly used benchmark for measuring poverty in South Africa during the survey period.
+
+---
+
+# 2. Data Loading and Preparation
+
+```{r load-packages}
+# ============================================================================
+# LOAD REQUIRED PACKAGES
+library(tidyverse)
+library(haven)
+library(scales)
+library(knitr)
+```
+
+```{r load-data}
+# ============================================================================
+# LOAD LSMS DATA FILES
+HH_income <- read_dta("HHINCTL.dta")
+HH_roster <- read_dta("M8_HROST.dta")
+HH_strata <- read_dta("STRATA2.dta")
+
+```
+
+```{r prepare-data}
+# ============================================================================
+# DATA PREPARATION
+# ============================================================================
+
+POVERTY_LINE <- 150 # Define poverty line (150 Rand per person per month)
+
+# Step 1: Calculate household size from roster data
+# -----------------------------------------------------------------------------
+household_size <- HH_roster %>%
+  group_by(hhid) %>%
+  summarise(
+    hh_size = n(),                          # Total household members
+    n_children = sum(age < 16, na.rm = TRUE), # Number of children (age < 16)
+    n_adults = sum(age >= 16, na.rm = TRUE)   # Number of adults
+  )
+
+# -----------------------------------------------------------------------------
+# Step 2: Calculate adult equivalent household size
+# Using OECD-modified equivalence scale approach where children (age < 16)
+# are weighted at 0.5 to account for lower consumption needs
+# -----------------------------------------------------------------------------
+adult_equivalents <- HH_roster %>%
+  mutate(adult_equiv_weight = ifelse(age >= 16, 1, 0.5)) %>%
+  group_by(hhid) %>%
+  summarise(adult_equiv_size = sum(adult_equiv_weight, na.rm = TRUE))
+
+# -----------------------------------------------------------------------------
+# Step 3: Merge income data with household characteristics
+# -----------------------------------------------------------------------------
+poverty_data <- HH_income %>%
+  select(hhid, totminc) %>%                   # Select household ID and total monthly income
+  left_join(household_size, by = "hhid") %>%
+  left_join(adult_equivalents, by = "hhid") %>%
+  left_join(
+    HH_strata %>% select(hhid, race, metro),
+    by = "hhid"
+  ) %>%
+  filter(!is.na(totminc), !is.na(hh_size)) %>%
+  mutate(
+    income_per_capita = totminc / hh_size,
+    income_adult_equiv = totminc / adult_equiv_size,
+    is_poor_pc = income_per_capita < POVERTY_LINE,
+    is_poor_ae = income_adult_equiv < POVERTY_LINE,
+    gap_pc = ifelse(is_poor_pc, (POVERTY_LINE - income_per_capita) / POVERTY_LINE, 0),
+    gap_ae = ifelse(is_poor_ae, (POVERTY_LINE - income_adult_equiv) / POVERTY_LINE, 0)
+  )
+
+# Add descriptive labels for race and location
+poverty_data <- poverty_data %>%
+  mutate(
+    race_label = factor(
+      race,
+      levels = 1:5,
+      labels = c("African", "Coloured", "Indian", "White", "Other")
+    ),
+    location_label = factor(
+      metro,
+      levels = 1:3,
+      labels = c("Rural", "Urban", "Metropolitan")
+    )
+  )
+```
+
+---
+
+# 3. Poverty Measurement Results
+
+## 3.1 FGT Poverty Indices (Per Capita Income)
+
+```{r fgt-measures-percapita}
+# ============================================================================
+# COMPUTE FGT POVERTY MEASURES (PER CAPITA INCOME)
+# ============================================================================
+
+fgt_per_capita <- poverty_data %>%
+  summarise(
+    `P0 (Headcount)` = mean(is_poor_pc) * 100,
+    `P1 (Poverty Gap)` = mean(gap_pc) * 100,
+    `P2 (Severity)` = mean(gap_pc^2) * 100,
+    `Sample Size` = n()
+  )
+
+kable(
+  fgt_per_capita,
+  digits = 2,
+  caption = "Table 1: FGT Poverty Measures Using Per Capita Income",
+  format.args = list(big.mark = ",")
+)
+```
+
+**Interpretation:**
+
+- **P0 = `r round(fgt_per_capita[[1]], 1)`%**: Approximately `r round(fgt_per_capita[[1]])`% of households have per capita income below the poverty line
+- **P1 = `r round(fgt_per_capita[[2]], 2)`%**: On average, poor households are `r round(fgt_per_capita[[2]], 1)`% below the poverty line
+- **P2 = `r round(fgt_per_capita[[3]], 2)`%**: The squared poverty gap reflects inequality among the poor
+
+## 3.2 FGT Poverty Indices (Adult Equivalent Income)
+
+```{r fgt-measures-adult-equiv}
+# ============================================================================
+# COMPUTE FGT POVERTY MEASURES (ADULT EQUIVALENT INCOME)
+# Adjusting for household composition using equivalence scales
+# ============================================================================
+
+fgt_adult_equiv <- poverty_data %>%
+  summarise(
+    `P0 (Headcount)` = mean(is_poor_ae) * 100,
+    `P1 (Poverty Gap)` = mean(gap_ae) * 100,
+    `P2 (Severity)` = mean(gap_ae^2) * 100,
+    `Sample Size` = n()
+  )
+
+kable(
+  fgt_adult_equiv,
+  digits = 2,
+  caption = "Table 2: FGT Poverty Measures Using Adult Equivalent Income"
+)
+```
+
+**Key Finding:** Adjusting for adult equivalence reduces the headcount ratio from `r round(fgt_per_capita[[1]], 1)`% to `r round(fgt_adult_equiv[[1]], 1)`%. This `r round(fgt_per_capita[[1]] - fgt_adult_equiv[[1]], 1)` percentage point difference reflects that simple per capita measures may overstate poverty in households with more children due to economies of scale in consumption.
+
+## 3.3 Comparison of Poverty Measures
+
+```{r poverty-comparison-chart}
+# ============================================================================
+# VISUALIZATION: COMPARISON OF POVERTY MEASURES
+# ============================================================================
+
+comparison_data <- tibble(
+  Measure = rep(c("P0 (Headcount)", "P1 (Gap)", "P2 (Severity)"), 2),
+  Method = rep(c("Per Capita", "Adult Equivalent"), each = 3),
+  Value = c(
+    fgt_per_capita[[1]], fgt_per_capita[[2]], fgt_per_capita[[3]],
+    fgt_adult_equiv[[1]], fgt_adult_equiv[[2]], fgt_adult_equiv[[3]]
+  )
+)
+
+ggplot(comparison_data, aes(x = Measure, y = Value, fill = Method)) +
+  geom_col(position = "dodge", width = 0.7) +
+  geom_text(
+    aes(label = sprintf("%.1f%%", Value)),
+    position = position_dodge(width = 0.7),
+    vjust = -0.5,
+    size = 3.5
+  ) +
+  scale_fill_manual(values = c("Per Capita" = "#2C3E50", "Adult Equivalent" = "#E74C3C")) +
+  labs(
+    title = "Figure 1: FGT Poverty Measures Comparison",
+    subtitle = "Per Capita vs. Adult Equivalent Income Approaches",
+    x = NULL,
+    y = "Percentage (%)",
+    fill = "Welfare Measure"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5, color = "gray40"),
+    legend.position = "top",
+    panel.grid.major.x = element_blank()
+  ) +
+  ylim(0, max(comparison_data$Value) * 1.15)
+```
+
+---
+
+# 4. Descriptive Statistics
+
+```{r descriptive-stats}
+# ============================================================================
+# DESCRIPTIVE STATISTICS
+# ============================================================================
+
+# Income distribution statistics
+income_stats <- poverty_data %>%
+  summarise(
+    Mean = mean(income_per_capita),
+    `Std. Dev.` = sd(income_per_capita),
+    Median = median(income_per_capita),
+    `25th Pctl` = quantile(income_per_capita, 0.25),
+    `75th Pctl` = quantile(income_per_capita, 0.75),
+    Min = min(income_per_capita),
+    Max = max(income_per_capita)
+  )
+
+kable(
+  income_stats,
+  digits = 2,
+  caption = "Table 3: Per Capita Income Distribution (Rand/month)",
+  format.args = list(big.mark = ",")
+)
+
+# Household size statistics
+size_stats <- poverty_data %>%
+  summarise(
+    Mean = mean(hh_size),
+    `Std. Dev.` = sd(hh_size),
+    Median = median(hh_size),
+    `25th Pctl` = quantile(hh_size, 0.25),
+    `75th Pctl` = quantile(hh_size, 0.75),
+    Min = min(hh_size),
+    Max = max(hh_size)
+  )
+
+kable(
+  size_stats,
+  digits = 2,
+  caption = "Table 4: Household Size Distribution"
+)
+```
+
+```{r income-distribution-plot}
+# ============================================================================
+# VISUALIZATION: INCOME DISTRIBUTION
+# ============================================================================
+
+ggplot(poverty_data, aes(x = income_per_capita)) +
+  geom_histogram(
+    aes(y = after_stat(density)),
+    bins = 50,
+    fill = "#3498DB",
+    color = "white",
+    alpha = 0.8
+  ) +
+  geom_density(color = "#E74C3C", linewidth = 1) +
+  geom_vline(
+    xintercept = POVERTY_LINE,
+    linetype = "dashed",
+    color = "#C0392B",
+    linewidth = 1
+  ) +
+  annotate(
+    "text",
+    x = POVERTY_LINE + 50,
+    y = Inf,
+    label = paste("Poverty Line =", POVERTY_LINE, "Rand"),
+    hjust = 0,
+    vjust = 2,
+    color = "#C0392B",
+    fontface = "bold"
+  ) +
+  scale_x_continuous(
+    limits = c(0, quantile(poverty_data$income_per_capita, 0.95)),
+    labels = comma
+  ) +
+  labs(
+    title = "Figure 2: Distribution of Per Capita Income",
+    subtitle = "Histogram with kernel density estimate (truncated at 95th percentile)",
+    x = "Per Capita Monthly Income (Rand)",
+    y = "Density"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5, color = "gray40")
+  )
+```
+
+---
+
+# 5. Disaggregated Analysis
+
+## 5.1 Poverty by Race
+
+```{r poverty-by-race}
+# ============================================================================
+# POVERTY RATES BY RACE
+# Using adult equivalent income
+# ============================================================================
+
+poverty_by_race <- poverty_data %>%
+  filter(!is.na(race_label)) %>%
+  group_by(race_label) %>%
+  summarise(
+    `Poverty Rate (%)` = mean(is_poor_ae) * 100,
+    `Poverty Gap (%)` = mean(gap_ae) * 100,
+    `Sample Size` = n(),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(`Poverty Rate (%)`))
+
+kable(
+  poverty_by_race,
+  digits = 2,
+  caption = "Table 5: Poverty Measures by Race (Adult Equivalent Income)",
+  format.args = list(big.mark = ",")
+)
+```
+
+```{r poverty-race-chart}
+# ============================================================================
+# VISUALIZATION: POVERTY BY RACE
+# ============================================================================
+
+ggplot(poverty_by_race, aes(x = reorder(race_label, `Poverty Rate (%)`), y = `Poverty Rate (%)`)) +
+  geom_col(fill = "#2C3E50", width = 0.7) +
+  geom_text(
+    aes(label = sprintf("%.1f%%", `Poverty Rate (%)`)),
+    hjust = -0.2,
+    size = 4
+  ) +
+  geom_hline(
+    yintercept = fgt_adult_equiv[[1]],
+    linetype = "dashed",
+    color = "#E74C3C"
+  ) +
+  annotate(
+    "text",
+    x = 0.5,
+    y = fgt_adult_equiv[[1]] + 2,
+    label = paste("National Average:", round(fgt_adult_equiv[[1]], 1), "%"),
+    hjust = 0,
+    color = "#E74C3C",
+    size = 3.5
+  ) +
+  coord_flip() +
+  labs(
+    title = "Figure 3: Poverty Headcount by Race",
+    subtitle = "Adult equivalent income measure; dashed line shows national average",
+    x = NULL,
+    y = "Poverty Rate (%)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5, color = "gray40"),
+    panel.grid.major.y = element_blank()
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15)))
+```
+
+## 5.2 Poverty by Urban/Rural Location
+
+```{r poverty-by-location}
+# ============================================================================
+# POVERTY RATES BY URBAN/RURAL LOCATION
+# ============================================================================
+
+poverty_by_location <- poverty_data %>%
+  filter(!is.na(location_label)) %>%
+  group_by(location_label) %>%
+  summarise(
+    `Poverty Rate (%)` = mean(is_poor_ae) * 100,
+    `Poverty Gap (%)` = mean(gap_ae) * 100,
+    `Sample Size` = n(),
+    .groups = "drop"
+  )
+
+kable(
+  poverty_by_location,
+  digits = 2,
+  caption = "Table 6: Poverty Measures by Location (Adult Equivalent Income)",
+  format.args = list(big.mark = ",")
+)
+```
+
+```{r poverty-location-chart}
+# ============================================================================
+# VISUALIZATION: POVERTY BY LOCATION
+# ============================================================================
+
+ggplot(poverty_by_location, aes(x = location_label, y = `Poverty Rate (%)`)) +
+  geom_col(aes(fill = location_label), width = 0.6, show.legend = FALSE) +
+  geom_text(
+    aes(label = sprintf("%.1f%%\n(n=%s)", `Poverty Rate (%)`, comma(`Sample Size`))),
+    vjust = -0.3,
+    size = 3.5
+  ) +
+  scale_fill_manual(values = c("Rural" = "#27AE60", "Urban" = "#3498DB", "Metropolitan" = "#9B59B6")) +
+  labs(
+    title = "Figure 4: Poverty Headcount by Location Type",
+    subtitle = "Adult equivalent income measure",
+    x = NULL,
+    y = "Poverty Rate (%)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5, color = "gray40"),
+    panel.grid.major.x = element_blank()
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.2)))
+```
+
+## 5.3 Intersectional Analysis: Race and Location
+
+```{r poverty-intersectional}
+# ============================================================================
+# INTERSECTIONAL ANALYSIS: POVERTY BY RACE AND LOCATION
+# ============================================================================
+
+poverty_intersectional <- poverty_data %>%
+  filter(!is.na(race_label), !is.na(location_label)) %>%
+  group_by(race_label, location_label) %>%
+  summarise(
+    poverty_rate = mean(is_poor_ae) * 100,
+    n = n(),
+    .groups = "drop"
+  ) %>%
+  filter(n >= 30)  # Filter for statistical reliability
+
+ggplot(poverty_intersectional, aes(x = race_label, y = poverty_rate, fill = location_label)) +
+  geom_col(position = "dodge", width = 0.8) +
+  geom_text(
+    aes(label = ifelse(poverty_rate > 5, sprintf("%.0f%%", poverty_rate), "")),
+    position = position_dodge(width = 0.8),
+    vjust = -0.5,
+    size = 3
+  ) +
+  scale_fill_manual(
+    values = c("Rural" = "#27AE60", "Urban" = "#3498DB", "Metropolitan" = "#9B59B6")
+  ) +
+  labs(
+    title = "Figure 5: Poverty Rates by Race and Location",
+    subtitle = "Adult equivalent income; cells with n < 30 excluded",
+    x = NULL,
+    y = "Poverty Rate (%)",
+    fill = "Location"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5, color = "gray40"),
+    legend.position = "top",
+    axis.text.x = element_text(angle = 0, hjust = 0.5)
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15)))
+```
+
+---
+
+# 6. Additional Analysis: Lorenz Curve
+
+```{r lorenz-curve}
+# ============================================================================
+# LORENZ CURVE ANALYSIS
+# Visualizing income inequality
+# ============================================================================
+
+# Calculate cumulative shares for Lorenz curve
+lorenz_data <- poverty_data %>%
+  arrange(income_per_capita) %>%
+  mutate(
+    cum_pop = row_number() / n(),           # Cumulative population share
+    cum_income = cumsum(income_per_capita) / sum(income_per_capita)  # Cumulative income share
+  )
+
+# Calculate Gini coefficient using trapezoidal approximation
+gini <- 1 - 2 * sum(lorenz_data$cum_income) / nrow(lorenz_data)
+
+ggplot(lorenz_data, aes(x = cum_pop, y = cum_income)) +
+  geom_line(color = "#2C3E50", linewidth = 1.2) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray50") +
+  geom_ribbon(aes(ymin = cum_income, ymax = cum_pop), fill = "#E74C3C", alpha = 0.2) +
+  annotate(
+    "text",
+    x = 0.7,
+    y = 0.3,
+    label = paste("Gini Coefficient =", round(gini, 3)),
+    size = 5,
+    fontface = "bold"
+  ) +
+  labs(
+    title = "Figure 6: Lorenz Curve for Per Capita Income",
+    subtitle = "The shaded area represents income inequality (Gini coefficient)",
+    x = "Cumulative Share of Population",
+    y = "Cumulative Share of Income"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5, color = "gray40")
+  ) +
+  coord_fixed()
+```
+
+---
+
+# 7. Policy Implications
+
+Based on the analysis of South Africa's LSMS data, the following policy recommendations emerge:
+
+1. **Geographic Targeting:** Rural areas exhibit significantly higher poverty rates than urban and metropolitan areas. Targeted interventions in rural infrastructure, agricultural support, and service delivery could yield substantial poverty reduction.
+
+2. **Addressing Racial Disparities:** The analysis reveals persistent racial inequalities in poverty rates, with African households experiencing the highest rates. Policies should address structural barriers to economic opportunity and human capital accumulation.
+
+3. **Multidimensional Approach:** While monetary poverty measures are essential, they should be complemented by multidimensional poverty indices that capture access to education, healthcare, and basic services.
+
+4. **Depth of Poverty:** The poverty gap (P1) and severity (P2) indices suggest that many poor households are significantly below the poverty line. Social protection programs should not only aim to lift households above the line but also address the depth of deprivation.
+
+## 7.3 Limitations and Caveats
+
+- **Data Currency:** The LSMS data reflect conditions at the time of the survey; current poverty rates may differ
+- **Poverty Line:** The 150 Rand threshold is illustrative; official poverty lines may vary
+- **Income vs. Consumption:** Income-based measures may understate welfare if households have access to non-income resources
+- **Sampling Weights:** This analysis does not incorporate survey weights, which could affect population-level estimates
+
+---
+
+## Data Sources
+
+- **HHINCTL.dta**: Household income totals
+- **M8_HROST.dta**: Household roster with individual demographics
+- **STRATA2.dta**: Stratification variables (race, urban/rural)
+
+Source: World Bank Living Standards Measurement Study (LSMS) - South Africa
+URL: https://microdata.worldbank.org/index.php/catalog/297
+
+---
+
+*Code prepared by Sotaire Kwizera | Analysis conducted in R `r paste(R.version$major, R.version$minor, sep=".")`*

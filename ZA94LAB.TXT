@@ -1,0 +1,3513 @@
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  CFPRI01
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum
+foodcode                                         fcode
+cfpri1        Cluster Food Price source 1
+cfpri2        Cluster Food Price source 2
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-bread
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-oil v
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-milk
+            16 16-baby
+            17 17-sugar
+            18 18-meat
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-o.veg
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-drink
+            29 29-m.out
+            30 30-m.to
+            31 31-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  CFPRI03
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum
+foodcode      1a:Food code                       fcode
+comnum        Num. Commodities Observed by Cl
+cfpri1        Cluster Food Price source 1
+cfpri2        Cluster Food Price source 2
+cfpri         Cluster Food Price
+flag          Missing Values                     fl
+imprice       Median Implicit Cluster Price
+province      Province                           pro
+md_ncode      New Magesterial Code
+metro         Metro - Urban - Rural              metro
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-white
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-veget
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-fresh
+            16 16-baby
+            17 17-sugar
+            18 18-mutto
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-other
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-soft
+            29 29-meals
+            30 30-meals
+            31 31-other
+metro:
+             1 Rural
+             2 Urban
+             3 Metro
+pro:
+             1 CAPE
+             2 NATAL
+             3 TRANSVAA
+             4 ORANGE F
+             5 KWA ZULU
+             6 KANGWANE
+             7 QWA-QWA
+             8 GAZANKUL
+             9 LEBOWA
+            10 KWANDEBE
+            11 TRANSKEI
+            12 BOPHUTHA
+            13 VENDA
+            14 CISKEI
+fl:
+             0 O.K.
+             1 Miss
+             2 Clust
+             3 Pro/Metr
+             4 Pro
+             5 Metro
+             6 All
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  COMPRIV9
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      :Cluster Number
+item                                             item
+price1
+price2
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+item:
+             1 Maize Gr
+             2 Samp
+             3 Mealie M
+             4 Maize Fl
+             5 Rice
+             6 White Br
+             7 Brown Br
+             8 Wheat fl
+             9 Breakfas
+            10 Peas dri
+            11 Lentils
+            12 Beans
+            13 Potatoes
+            14 Madumbe
+            15 Sweet Po
+            16 Vegetabl
+            17 Margarin
+            18 Butter
+            19 Fresh Mi
+            20 Sour Mil
+            21 Yoghurt
+            22 Baby for
+            23 Milk Pow
+            24 Sugar
+            25 Mutton
+            26 Beef
+            27 Pork
+            28 Chicken
+            29 Eggs
+            30 Fresh Fi
+            31 Tinned F
+            32 Pumpkin
+            33 Squash
+            34 Carrots
+            35 Cabbage
+            36 Bananas
+            37 Apples
+            38 Citrus F
+            39 Soft Dri
+            40 Cheese
+            41 Tomatoes
+            42 Salt
+            43 Cigarett
+            44 Washing
+            45 Toilet p
+            46 Soap (fa
+            47 Other so
+            48 Toothpas
+            49 Paraffin
+            50 Charcoal
+            51 Coal
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  FCODE1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+foodcode                                         fcode
+conv_k        Kilogram conversion
+conv_cal      Calories per Kilogram
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-bread
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-oil v
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-milk
+            16 16-baby
+            17 17-sugar
+            18 18-meat
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-o.veg
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-drink
+            29 29-m.out
+            30 30-m.to
+            31 31-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  FCODE2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+foodcode                                         fcode
+conv_k        Kilogram conversion
+conv_cal      Calories per Kilogram
+mdprice       Imputed Median Kg Price
+mprice        Imputed Mean Kg Price
+stprice       Imputed Standard deviation
+nobs          Number of Observations
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-bread
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-oil v
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-milk
+            16 16-baby
+            17 17-sugar
+            18 18-meat
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-o.veg
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-drink
+            29 29-m.out
+            30 30-m.to
+            31 31-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  FOODEX01
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+foodcode      1a:Food code                       fcode
+flag13        Missing ?                          fl2
+weekly        2 :Weekly/Monthly?
+mxpur         Monthly value purchased
+mxrec         Monthly value received
+mxprod        Monthly value produced
+mxcons        Monthly expenditure consumed
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-white
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-veget
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-fresh
+            16 16-baby
+            17 17-sugar
+            18 18-mutto
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-other
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-soft
+            29 29-meals
+            30 30-meals
+            31 31-other
+fl2:
+             1 Del
+             2 Good
+             3 1 Neg
+             4 Neg
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  FOODEX02
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+foodcode      1a:Food code                       fcode
+flag13        Missing ?                          fl2
+weekly        2 :Weekly/Monthly?
+mxpur         Monthly value purchased
+mxrec         Monthly value received
+mxprod        Monthly value produced
+mxcons        Monthly expenditure consumed
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fl2:
+             1 Del
+             2 Good
+             3 1 Neg
+             4 Neg
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-white
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-veget
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-fresh
+            16 16-baby
+            17 17-sugar
+            18 18-mutto
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-other
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-soft
+            29 29-meals
+            30 30-meals
+            31 31-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  FOODEX10
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+foodcode      1a:Food code                       fcode
+weekly        2 :Weekly/Monthly?
+eaten_v       3a:Value of food
+eaten_a       3b:Quantity
+receive_      4a:Value of food received
+receive1      4b:Amount of food received
+product_      5a:Value of food produced
+product1      5b:Amount of food produced
+flag13        Missing ?                          fl2
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-white
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-veget
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-fresh
+            16 16-baby
+            17 17-sugar
+            18 18-mutto
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-other
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-soft
+            29 29-meals
+            30 30-meals
+            31 31-other
+fl2:
+             1 Del
+             2 Good
+             3 1 Neg
+             4 Neg
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  HHEXPTL
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+marker04      Marker                             mar
+mxtrent       Total Housing Expenditure
+mxtutil       Tot exp: energy, water, rates
+marker06      Marker                             mark
+mxtfood       Total Monthly Food exp.
+marker07      Marker                             mark
+mxcar         Vehicle Exp.
+mxtran        Transportation Exp.
+marker08      Marker                             mark
+mxper         Personal Items
+mxoth1        Other NonFood 1
+marker09      Marker                             mark
+mxhous        Household Exp.
+mxcloth       Clothing Exp.
+mxhea         Health Care Exp.
+mxoth2        Other NonFood 2
+mxinsur       Insurance.
+mxsav         Saving.
+marker10      Marker                             mark
+mxtsch        Total School Expenditure
+marker14      Marker                             mark
+mxtrem        Tot Month Remittance Expenditur
+marker17      Marker                             mark
+hhsizep       HH Size All
+hhsizem       HH Size Memebers
+homewage      Household Housing Subsidy
+foodrec       Total Month Food Received
+tmxrec        Tot Month Food Received Value
+flgfrec1      Flag Food Received Wage
+flgfrec2      Flag Food Received Remittances
+flgfrec3      Flag Food Received F.O.S
+bursary1      1b:Value of bursaries
+trsch         sum 7 :Transport costs
+markert1      Marker                             mark
+trwork        sum 4 :Transport cost
+markert2      Marker                             mark
+trschwk
+travwage      Household Travel Subsidy
+totmexp       Total Monthy Expenditure
+totmexpr      Total Monthy Exp. w/ remittance
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+mar:
+             0 Miss
+             1 Rent_a
+             2 Rent_m
+             3 Val
+             4 No Re/Va
+             5 Impute
+mark:
+             0 Miss
+             1 Orig
+             2 Impute
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  HHFEXP
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+hhsizem       max HH Size Memebers
+ptxgrain      Per capita grain month exp.
+ptxmeafi      Per capita meat & fish month ex
+ptxdairy      Per capita dairy month exp.
+ptxfruve      Per capita fru. and veg. month
+ptxoils       Per capita oil month exp.
+ptxsugar      Per capita sugar month exp.
+ptxmeals      Per capita meals month exp.
+ptxother      Per capita other month exp.
+pctfexp       Per capita tot food month exp.
+hhtfexp       Household tot food month exp.
+sxgrain       Share grain month exp.
+sxmeafi       Share meat & fish month exp.
+sxdairy       Share dairy month exp.
+sxfruve       Share fru. and veg. month exp.
+sxoils        Share oil month exp.
+sxsugar       Share sugar month exp.
+sxmeals       Share meals month exp.
+sxother       Share other month exp.
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  HHFEXPT
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+tmxpur        Tot Month Food Purchase Value
+tmxrec        Tot Month Food Received Value
+tmxpro        Tot Month Food Produced Value
+tmxcon        Tot Month Food Value
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  HHINCTL
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+rentinc       Rental Income
+hhnwage       Household Net Wage
+hhgwage       Household Gross Wage
+imprent       Imp house prop value - 5.0%
+farmrent      Crop Rental Income
+liverent      Grazing Rental Income
+totm_cas      Total Yearly Cash received
+totm_kin      Total Monthly in kind
+totm_rec      Total Monthly received
+travwage      Household Travel Subsidy
+foodwage      Household Food Subsidy
+homewage      Household Housing Subsidy
+hhc1wage      Household Cas 1 Wage
+foodcw1       Household Cas 1 Food Subsidy
+bencw1        Household Cas 1 subsidy
+hhc2wage      Household Cas 2 Wage
+foodcw2       Household Cas 2 Food Subsidy
+bencw2        Household Cas 2 subsidy
+largefrm      Valid Large Farmers ?
+agincome      Value of Ag. Income
+agsubsid      Value of Ag. Subsidy
+profit31      Household profit value
+otherinc      Household other income
+hhid          Household identification No
+marker21      Missing Wage value
+marker22      With missing Cas 1 Wage value
+marker23      With missing Cas 2 Wage value
+marker31      Missing profit data
+marker32      Missing Values
+tmxrec        Tot Month Food Received Value
+rent_mkt      9c:Monthly rent (mkt)
+totminc       Total Monthy Income
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  HHSIZE
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+hhsizep       HH Size All
+hhsizem       HH Size Memebers
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  HHSTX01
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+stxgroc       Groceries.
+stxfood       Food eaten out.
+stxhol        Holidays.
+stxcars       Cars, etc.
+stxfurn       Furniture.
+stxcloth      Clothing.
+stxhelp       domestic workers.
+stxinsur      Insurance.
+stxsav        Saving.
+stxtot        Summary Exp: total
+marker10      Marker                             mark
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+mark:
+             0 Miss
+             1 Orig
+             2 Impute
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M10_FSC
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+foodcode      1a:Food code                       fcode
+eaten_b       1b:Eat or Bought?
+weekly        2 :Weekly/Monthly?
+eaten_v       3a:Value of food
+eaten_a       3b:Quantity
+receive_      4a:Value of food received
+receive1      4b:Amount of food received
+product_      5a:Value of food produced
+product1      5b:Amount of food produced
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+fcode:
+             1 01-maize
+             2 02-meali
+             3 03-rice(
+             4 04-white
+             5 05-wheat
+             6 06-break
+             7 07-dried
+             8 08-potat
+             9 09-tomat
+            10 10-madum
+            11 11-veget
+            12 12-marga
+            13 13-chees
+            14 14-jam (
+            15 15-fresh
+            16 16-baby
+            17 17-sugar
+            18 18-mutto
+            19 19-chick
+            20 20-eggs
+            21 21-fresh
+            22 22-tinne
+            23 23-pumpk
+            24 24-other
+            25 25-banan
+            26 26-apple
+            27 27-citru
+            28 28-soft
+            29 29-meals
+            30 30-meals
+            31 31-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M1_AGR2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+item_c        :Livestock Code                    lstock
+l_own         2a:No of livestock owned now
+l_born        2b:No of livestock born
+l_sold        2c:No of livestock sold
+l_sale        2d:Value of livestock sales
+l_bought      2e:No of livestock bought
+l_slaugh      2f:No of livestock slaughtered
+l_lost        2g:No of livestock lost
+l_loan        2h:No of livestock  loaned
+l_borr        2i:No of livestock borrowed
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+lstock:
+             1 01-cattl
+             2 02-sheep
+             3 03-goats
+             4 04-pigs
+             5 05-poult
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M1_AGR4
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+cost_cod      2 :Code                            expofarm
+pay_cash      3 :Amt paid in cash and credit
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+expofarm:
+             1 01-wages
+             2 02-farmi
+             3 03-petro
+             4 04-food
+             5 05-farm
+             6 06-other
+             7 07-land
+             8 08-vario
+             9 09-inter
+            10 10-any o
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M1_CASW2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2b:Person code
+occupatn      3a:Code - Occupation               cocc
+employer      3b:Code of employer                cbus
+sector_c      3c:Sector code                     csector
+hours_v       3d:Hours worked on average day
+hours_ot      3e:Overtime hours past week
+cash_pai      4c:Cash pay last month
+food_ben      4e:Value of food subsidy
+benefit_      4e:Value of other benefits
+value_eq      4f:Value of equipment
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+csector:
+             1 01-agric
+             2 02-minin
+             3 03-manuf
+             4 04-elect
+             5 05-const
+             6 06-whole
+             7 07-resta
+             8 08-trans
+             9 09-finan
+            10 10-educa
+            11 11-medic
+            12 12-legal
+            13 13-domes
+            14 14-armed
+            15 15-other
+            16 16-other
+cbus:
+             1 01-centr
+             2 02-provi
+             3 03-local
+             4 04-publi
+             5 05-priva
+             6 06-non-p
+             7 07-self-
+             8 08-house
+             9 09-other
+cocc:
+             1 01-profe
+             2 02-manag
+             3 03-cleri
+             4 04-trans
+             5 05-servi
+             6 06-farmi
+             7 07-artis
+             8 08-produ
+             9 09-opera
+            10 10-labou
+            11 11-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M1_ED2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+educ_exp      2 :Code                            educ_exp
+educ_ex1      3 :Amount
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+educ_exp:
+             1 01-pre-p
+             2 02-prima
+             3 03-secon
+             4 04-terti
+             5 05-unifo
+             6 06-trans
+             7 07-meals
+             8 08-stati
+             9 09-books
+            10 10-board
+            11 11-build
+            12 12-teach
+            13 13-extra
+            14 14-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M2_AGR1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+crop_cod      1b:Crop code                       crops
+unitshvr      1c:Units - qty harvested           cunits
+amt_harv      1d:Amount harvested
+unit_pri      1e:Price per unit
+units_so      1e:Units sold
+pay_labr      1f:Payments to workers
+pay_rent      1g:No of units paid - rent
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+crops:
+             1 01-maize
+             2 02-maize
+             3 03-sorgh
+             4 04-wheat
+             5 05-potat
+             6 06-orcha
+             7 07-banan
+             8 08-grape
+             9 09-beans
+            10 10-pumpk
+            11 11-G.veg
+            12 12-mille
+            13 13-madum
+            14 14-peanu
+            15 15-tomat
+            16 16-onion
+            17 17-sugar
+            18 18-O.veg
+            19 19-pastu
+            20 20-comme
+            21 21-infim
+            22 22-other
+cunits:
+             1 01-kilos
+             2 02-10 ki
+             3 03-25 ki
+             4 04-50 ki
+             5 05-80 ki
+             6 06-tons
+             7 07-boxes
+             8 08-25 li
+             9 09-piece
+            10 10-Basin
+            11 11-Bunce
+            12 12-Other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M2_NFS1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+rnfs_c        2 :Code                            non_f_1
+rnfs_a        3 :Amount
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+non_f_1:
+             1 01-cigar
+             2 02-beer,
+             3 03-enter
+             4 04-perso
+             5 05-newsp
+             6 06-telep
+             7 07-petro
+             8 08-buses
+             9 09-washi
+            10 10-child
+            11 11-relig
+            12 12-infor
+            13 13-domes
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M2_NFS3
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+sumexp_c      1a:Code                            sumexp_c
+sumexp_a      2 :Actual Mthly Exp
+sumexp_1      3 :Usual Mthly Exp
+sumexp_2      4 :Annual Exp
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+sumexp_c:
+             1 01-groce
+             2 02-food
+             3 03-holid
+             4 04-cars
+             5 05-furni
+             6 06-cloth
+             7 07-payme
+             8 08-insur
+             9 09-savin
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M2_NFS4
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+dura_c        2 :Code                            dura_c
+dura_n        3 :No of durables
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+dura_c:
+             1 01-motor
+             2 02-bicyc
+             3 03-radio
+             4 04-elect
+             5 05-gas s
+             6 06-primu
+             7 07-fridg
+             8 08-tv
+             9 09-geyse
+            10 10-elect
+            11 11-telep
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M2_REM1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+r_residn      3 :Residence of recipient          place
+r_relatn      4a:Relationship code to member     rem_rel
+pcode         4c:Person code of relation
+r_cash_t      5a:No of times sent cash to abs
+r_cash_y      5b:Cash sent in past year
+r_cash_m      5c:Cash sent in past month
+r_inkind      6a:No of times sent in kind
+r_inkin1      6b:Value in kind sent in past y
+r_inkin2      6c:Value in kind sent in past m
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+rem_rel:
+             1 01-wife/
+             2 02-fathe
+             3 03-son/d
+             4 04-broth
+             5 05-other
+             6 06-not r
+             7 07-famil
+place:
+             1 01-preto
+             2 02-durba
+             3 03-cape
+             4 04-port
+             5 05-e. lo
+             6 06-bloem
+             7 07-kimbe
+             8 08-piete
+             9 09-other
+            10 10-other
+            11 11-other
+            12 12-other
+            13 13-rural
+            14 14-rural
+            15 15-rural
+            16 16-rural
+            17 17-homel
+            18 18-homel
+            19 19-anoth
+            20 20-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M2_REM2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+s_residn      2 :Residence of absent member      place
+s_relatn      4a:Relationship code               rem_rel
+pcode         4c:Person code of relation
+s_cash_t      5a:No of times
+s_cash_y      5b:Cash in the past year
+s_cash_m      5c:Cash in past month
+s_inkind      6a:No of times in past year - k
+s_inkin1      6b:Value in kind in past year
+s_inkin2      6c:Value in kind in past month
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+place:
+             1 01-preto
+             2 02-durba
+             3 03-cape
+             4 04-port
+             5 05-e. lo
+             6 06-bloem
+             7 07-kimbe
+             8 08-piete
+             9 09-other
+            10 10-other
+            11 11-other
+            12 12-other
+            13 13-rural
+            14 14-rural
+            15 15-rural
+            16 16-rural
+            17 17-homel
+            18 18-homel
+            19 19-anoth
+            20 20-other
+rem_rel:
+             1 01-wife/
+             2 02-fathe
+             3 03-son/d
+             4 04-broth
+             5 05-other
+             6 06-not r
+             7 07-famil
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M3_CASW1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2b:Person code
+occupatn      3a:Code - Occupation               cocc
+employer      3b:Code of employer                cbus
+sector_c      3c:Sector code                     csector
+hours_v       3d:Hours worked average day
+hours_ot      3e:Overtime hours past week
+cash_pai      4c:Cash pay last month
+food_ben      4e:Value of food subsidy
+benefit_      4e:Value of other benefits
+value_eq      4f:Value of equipment
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+csector:
+             1 01-agric
+             2 02-minin
+             3 03-manuf
+             4 04-elect
+             5 05-const
+             6 06-whole
+             7 07-resta
+             8 08-trans
+             9 09-finan
+            10 10-educa
+            11 11-medic
+            12 12-legal
+            13 13-domes
+            14 14-armed
+            15 15-other
+            16 16-other
+cbus:
+             1 01-centr
+             2 02-provi
+             3 03-local
+             4 04-publi
+             5 05-priva
+             6 06-non-p
+             7 07-self-
+             8 08-house
+             9 09-other
+cocc:
+             1 01-profe
+             2 02-manag
+             3 03-cleri
+             4 04-trans
+             5 05-servi
+             6 06-farmi
+             7 07-artis
+             8 08-produ
+             9 09-opera
+            10 10-labou
+            11 11-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M3_HEA1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         3 :Person code
+still_si      3a:Still sick?
+sick1_c       4 :1st sick code                   h_sick
+sick2_c       5 :2nd sick code                   h_sick
+days_sic      6 :No of days sick
+days_out      7 :Days out of work
+consult       8 :Consultation                    h_cnsult
+time_get      9a:Time taken to get there
+time_tre      9b:Time taken to get treat
+charge        9c:Amount charged
+medic_co      9d:Cost of medicine
+explain       10 :Reason for not consulting      h_excuse
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+h_excuse:
+             1 01-no wa
+             2 02-expen
+             3 03-insuf
+             4 04-not k
+             5 05-not h
+             6 06-hours
+             7 07-lose
+             8 08-langu
+             9 09-queu
+            10 10-other
+h_cnsult:
+             1 01-none
+             2 02-famil
+             3 03-docto
+             4 04-tradi
+             5 05-healt
+             6 06-hospi
+             7 07-visit
+             8 08-pharm
+             9 09-shop/
+            10 10-nurse
+            11 11-other
+h_sick:
+             0 00-no 2n
+             1 01-tuber
+             2 02-asthm
+             3 03-malar
+             4 04-rheum
+             5 05-high
+             6 06-measl
+             7 07-hepat
+             8 08-kidne
+             9 09-strok
+            10 10-cirrh
+            11 11-diarr
+            12 12-flu
+            13 13-fever
+            14 14-injur
+            15 15-viole
+            16 16-illne
+            17 17-cance
+            18 18-aller
+            19 19-diabe
+            20 20-hiv i
+            21 21-physi
+            22 22-menta
+            23 23-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M3_HSV4
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+exp_c         1b:Expenditure code                exp_ewr
+exp_a         1c:Amount spent
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+exp_ewr:
+             1 01-wood
+             2 02-paraf
+             3 03-charc
+             4 04-elect
+             5 05-candl
+             6 06-gas
+             7 07-purch
+             8 08-diese
+             9 09-other
+            10 10-water
+            11 11-munic
+            12 12-water
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M3_LAND2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+property      2a:List of properties
+value         2b:Value of property
+rental_c      2c:Rent recieved?
+rental_v      2d:Rent (last 12 months)
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M3_NFS2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+onfs_c        2 :Code                            non_f_2
+onfs_a        3 :Amount spent
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+non_f_2:
+             1 01-kitch
+             2 02-home
+             3 03-beddi
+             4 04-furni
+             5 05-shoes
+             6 06-cloth
+             7 07-mater
+             8 08-denti
+             9 09-hospi
+            10 10-medic
+            11 11-tradi
+            12 12-holid
+            13 13-jewel
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M3_NFS5
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+debt_c        2a:Code  for lender                debt_c
+debt_owe      2b:Amount owed
+debt_rep      2c:Amount repaid
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+debt_c:
+             1 01-relat
+             2 02-gover
+             3 03-landl
+             4 04-banks
+             5 05-non g
+             6 06-money
+             7 07-stokv
+             8 08-buria
+             9 09-emplo
+            10 10-hire
+            11 11-shopk
+            12 12-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M3_SEMP
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+activ1_c      2 :Activity code                   self_emp
+mcode1_c      3 :Code:member 1
+mcode2_c      4 :Code member 2
+mcode3_c      5 :Code member 3
+grtime_1      6 :Gross time-activity 1
+grsales_      7 :Gross sales-activity 1
+profit_1      8 :Ave monthly profit - activit
+expen_1       8 :Total expenses - activity 1
+equipval      9 :Value of equipment/stocks 1
+other_em      10 :No of others inv excl hh me
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+self_emp:
+             1 01-shopk
+             2 02-selli
+             3 03-shebe
+             4 04-herba
+             5 05-sewin
+             6 06-repai
+             7 07-tradi
+             8 08-helpi
+             9 09-taxi
+            10 10-food
+            11 11-weavi
+            12 12-build
+            13 13-colle
+            14 14-child
+            15 15-self-
+            16 16-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M4_ED1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2 :Person code
+enrol_c       3 :Enrolled(formal Education) ?
+reason        4 :Reason not in school            educ_4
+last_enr      5 :Last year enrolled
+time_tak      6 :Time taken(to and fro)
+trans_co      7 :Transport costs
+tran_ed1      8a:1st transport                   educ_8
+tran_ed2      8b:2nd transport                   educ_8
+tran_ed3      8c:3rd transport                   educ_8
+age           5 :Age in years
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+educ_8:
+             1 01-bus
+             2 02-taxi
+             3 03-train
+             4 04-bicyc
+             5 05-car/m
+             6 06-walk
+             7 07-car p
+             8 08-other
+educ_4:
+             1 01-expen
+             2 02-work
+             3 03-illne
+             4 04-pregn
+             5 05-no sc
+             6 06-not_c
+             7 07-boyco
+             8 08-unres
+             9 09-compl
+            10 10-requi
+            11 11-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M4_HEA2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2 :Person code
+preg_no       3 :No of pregnancies
+no_birth      4 :No of births
+stillbor      5 :No stillborn
+no_alive      6 :No alive now
+died_1        7 :No died before 1yr
+died_1_5      7 :No died between age 1 + 5
+preg_now      8 :Pregnant now ?
+breast_f      9 :Breast feeding ?
+age_youn      10 :Age of youngest child
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M4_TRAN
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2 :Person code
+tran_tim      3 :Time taken to get to work
+tran_cos      4 :Transport cost
+trans_1       5 :First mode of transport         trnsport
+trans_2       6 :2nd mode of transport           trnsport
+trans_3       7 :3rd Mode of transport           trnsport
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+trnsport:
+             1 01-bus
+             2 02-taxi
+             3 03-train
+             4 04-bicyc
+             5 05-car/m
+             6 06-walk
+             7 07-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M5_EDUC1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+facility      4 : Service\facility code          edu_cd1
+school1       4 : primary school type- one
+school2       4 : primary school type- two
+school3       4 : primary school type- three
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+edu_cd1:
+             1 01=5.Gov
+             2 02=6.Boy
+             3 03=7.Num
+             4 04=8a.Li
+             5 05=8b.Sp
+             6 06=8c.Sw
+             7 07=9a.Nu
+             8 08=9b.Nu
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M5_EDUC2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+facility      4 : Service\facility code          edu_cd2
+school1       4 : secondary school type- one
+school2       4 : secondary school type- two
+school3       4 : secondary school type- thre
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+edu_cd2:
+             1 01=5.Gov
+             2 02=6.Boy
+             3 03=7.Num
+             4 04=8a.Li
+             5 05=8b.Sp
+             6 06=8c.Sw
+             7 07=8d.Sc
+             8 08=9a.Ac
+             9 09=9b.Te
+            10 10=9c.Ac
+            11 11=10a.N
+            12 12=10b.N
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M5_HEAL1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+person        1  : personnel code                hea_cd1
+respond       1  : respondent code
+distance      2  : distance of personnel
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+hea_cd1:
+             1 01=a.Doc
+             2 02=b.Nur
+             3 03=c.Pha
+             4 04=d.Tra
+             5 05=e.Fam
+             6 06=f.Com
+             7 07=g.Tra
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M5_HEAL2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+facility      3  : facility code                 hea_cd2
+respond       3  : hospital                      res_cd
+number        4  : number of hospitals
+distance      5  : distance of hospital
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+hea_cd2:
+             1 01=a.Hos
+             2 02=b.Dis
+             3 03=c.Pha
+             4 04=d.Mat
+             5 05=e.Cli
+             6 06=f.Fam
+res_cd:
+             1 01=YES
+             2 02=NO
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M5_INES
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+source_c      1a:Code - Source of income -       inc_othr
+source_q      1c:Receive income?
+pcode         2b:Person code
+amt_rec       2c:Amount received
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+inc_othr:
+             1 01-old a
+             2 02-priva
+             3 03-gover
+             4 04-gover
+             5 05-gover
+             6 06-gover
+             7 07-inter
+             8 08-unemp
+             9 09-ngo f
+            10 10-other
+            11 11-gover
+            12 12-other
+            13 13-maint
+            14 14-sick
+            15 15-inher
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M5_RECR
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum
+facility      6  : Code of facility used         rec_cd
+number        6.1: Number of recreational fac
+access        6.2: Acces to the facility         res_cd
+distance      6.3: Distance of the facility
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+rec_cd:
+             1 01=cinem
+             2 02=Disco
+             3 03=Night
+             4 04=Sport
+             5 05=Tenni
+             6 06=Swimm
+             7 07=Child
+             8 08=Other
+res_cd:
+             1 01=YES
+             2 02=NO
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M6_ANTH
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2 :Person code
+new           New Measurement data               new
+gender        3 :Gender
+date_bir      4 :Date of Birth
+source_b      5 :Source of birth info            source_b
+clin_car      6 :Clinic Card
+measles_      7a:Vaccinated(Measles)
+dpt_v         7b:Vaccinated(DPT)
+polio_v       7c:Vaccinated(Polio)
+tb_v          7d:Vaccinated(TB)
+breast_f      8 :Child Breast Feeding
+breast_s      9 :Age Breast Feeding Stopped
+child_fe      10 :No. x Child Fed per Day
+weight        11 :Weight
+height        12 :Height
+measured      13 :Reason Not Measured            measrnot
+solids        14 :Age start solids
+yearb         Year of birth
+monthb        Month of birth
+yearr         Year of remeasuring
+monthr        Month of remeasuring
+agem          Age in Months
+haz           Height for Age Z score
+waz           Weight for Age Z score
+whz           Weight for Height Z score
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+new:
+             0 Not meas
+             1 Old meas
+             2 New meas
+source_b:
+             1 01-clini
+             2 02-road
+             3 03-bapti
+             4 04-mothe
+             5 05-O per
+             6 06-schoo
+             7 07-birth
+             8 08-other
+measrnot:
+             1 01-not p
+             2 02-refus
+             3 03-ill c
+             4 04-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M6_ECON1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+facility      5 : Service\facility code          econ_cd
+number        5a: number of facilities
+access        5b: access to facility             access
+distance      5c: distance of facility
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+econ_cd:
+             1 restaura
+             2 02=Drink
+             3 03=Post
+             4 04=Publi
+             5 05=Bank
+             6 06=Marke
+             7 07=Perio
+access:
+             1 01=YES
+             2 02=No
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M6_REMP
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2b:Person code
+k_occ_c       3a:Code:occupation                 cocc
+k_emplyr      3b:Code:employer                   cbus
+k_sector      3c:Code:economic sector            csector
+k_hours       3d:Hours per day
+k_overti      3e:Overtime in past week
+p_paytyp      4c:Pay period type
+p_netpay      4d:Take home pay
+p_deduct      4e:Deductions (not taxes)
+p_grossp      4f:Gross pay
+p_bonus       4g:Bonus in the last year
+p_profit      4h:Profit share in past year
+p_pensio      4i:Contribute to pension ?
+subs_t        5c:Value of transport
+subs_f        5d:Value of food subsidy
+subs_h        5e:Value of house subsidy
+subs_tu       5f:Paid-up member of a trade un
+subs_equ      5g:Value of equipment
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+csector:
+             1 01-agric
+             2 02-minin
+             3 03-manuf
+             4 04-elect
+             5 05-const
+             6 06-whole
+             7 07-resta
+             8 08-trans
+             9 09-finan
+            10 10-educa
+            11 11-medic
+            12 12-legal
+            13 13-domes
+            14 14-armed
+            15 15-other
+            16 16-other
+cbus:
+             1 01-centr
+             2 02-provi
+             3 03-local
+             4 04-publi
+             5 05-priva
+             6 06-non-p
+             7 07-self-
+             8 08-house
+             9 09-other
+cocc:
+             1 01-profe
+             2 02-manag
+             3 03-cleri
+             4 04-trans
+             5 05-servi
+             6 06-farmi
+             7 07-artis
+             8 08-produ
+             9 09-opera
+            10 10-labou
+            11 11-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M8_EMPS
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         2b:Person code
+unempl_q      3 :Currently Employed ?
+job_desc      4 :Job desription                  empsta
+hours_wo      5 :Hours worked last week
+more_wor      6 :Liked more work last week
+look_wor      7 :Look for work?
+reason_n      8 :Reason not look for work        reason_u
+jobseek_      10 :Job seeking method             jobseek
+time_spe      11 : Time spent(hrs)
+w_wage_l      12 :Lowest weekly wage
+m_wage_l      13 :Lowest monthly wage
+paid_job      14 :Paid job for 1 mth
+job_des1      15a: Code recent job               cocc
+employer      15b:Current Employer               cbus
+sector        15c:Sector                         csector
+unempl_1
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+empsta:
+             1 01-regul
+             2 02-casua
+             3 03-self-
+             4 04-other
+             5 05-other
+reason_u:
+             1 01-alrea
+             2 02-no jo
+             3 03-illne
+             4 04-physi
+             5 05-menta
+             6 06-house
+             7 07-forma
+             8 08-retir
+             9 09-other
+jobseek:
+             1 01-newsp
+             2 02-emplo
+             3 03-facto
+             4 04-throu
+             5 05-other
+cocc:
+             1 01-profe
+             2 02-manag
+             3 03-cleri
+             4 04-trans
+             5 05-servi
+             6 06-farmi
+             7 07-artis
+             8 08-produ
+             9 09-opera
+            10 10-labou
+            11 11-other
+cbus:
+             1 01-centr
+             2 02-provi
+             3 03-local
+             4 04-publi
+             5 05-priva
+             6 06-non-p
+             7 07-self-
+             8 08-house
+             9 09-other
+csector:
+             1 01-agric
+             2 02-minin
+             3 03-manuf
+             4 04-elect
+             5 05-const
+             6 06-whole
+             7 07-resta
+             8 08-trans
+             9 09-finan
+            10 10-educa
+            11 11-medic
+            12 12-legal
+            13 13-domes
+            14 14-armed
+            15 15-other
+            16 16-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  M8_HROST
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+pcode         1 :Person code
+mcode         1a: Circled member / Resident
+pers_res      1b: Is person respondent
+rel_head      3 :Relationship to head            rel_head
+gender_c      4 :Gender code
+age           5 :Age in years
+educ_c        6 :Education code                  educ_c
+spouse        7 :Spouse present ?
+father        8 :Father present ?
+mother        9 :Mother present ?
+abs_mont      10 :Absence in last 12 mths
+absence_      11 :Code -Reason for absence       absence_
+resident      12 :15 days out of last 30 days
+migrate       13 :Migrated during past 5 yrs
+last_pla      14 :Last place of residence        place
+gender_n      4 :Gender code                     gender_n
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+gender_n:
+             1 -1
+             2 F
+             3 M
+place:
+             1 01-preto
+             2 02-durba
+             3 03-cape
+             4 04-port
+             5 05-e. lo
+             6 06-bloem
+             7 07-kimbe
+             8 08-piete
+             9 09-other
+            10 10-other
+            11 11-other
+            12 12-other
+            13 13-rural
+            14 14-rural
+            15 15-rural
+            16 16-rural
+            17 17-homel
+            18 18-homel
+            19 19-anoth
+            20 20-other
+absence_:
+             1 Employ
+             2 Looking
+             3 School
+             4 Student
+             5 Personal
+             6 Violence
+             7 Family
+             8 Friends
+             9 Living o
+            10 Prison
+            11 Vacation
+            12 Hospital
+            13 Business
+            14 Service
+            15 Other
+educ_c:
+             0 00-none
+             1 01-sub a
+             2 02-std 2
+             3 03-std 3
+             4 04-std 4
+             5 05-std 5
+             6 06-std 6
+             7 07-std 7
+             8 08-std 8
+             9 09-std 9
+            10 10-std 1
+            11 11-std 7
+            12 12-std 1
+            13 13-std 1
+            14 14-std 1
+            15 15-std 1
+            16 16-compl
+            17 17-crech
+            18 18-pre-p
+            19 19-other
+rel_head:
+             1 01-resid
+             2 02-absen
+             3 03-wife
+             4 04-son o
+             5 05-fathe
+             6 06-grand
+             7 07-grand
+             8 08-mothe
+             9 09-son-
+            10 10-broth
+            11 11-aunt
+            12 12-siste
+            13 13-niece
+            14 14-cousi
+            15 15-great
+            16 16-house
+            17 17-lodge
+            18 18-other
+            19 19-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  METRO
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum
+metro         Metro - Urban - Rural              metro
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+metro:
+             1 Rural
+             2 Urban
+             3 Metro
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  NF1X01
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+mxcig         Cigarettes and Tobacco Exp.
+mxalc         Spirits Exp.
+mxent         Entertainment Exp.
+mxpcare       Personal Care Exp.
+mxnews        Newspapers Etc. Exp.
+mxtel         Telephone Exp.
+mxcar         Vehicle Exp.
+mxtran        Transportation Exp.
+mxwash        Washing Supplies Exp.
+mxchil        Day Care Exp.
+mxdues        Dues Exp.
+mxdon         Donations Exp.
+mxhelp        Household Help Exp.
+flag          With Missing Values
+mxtot         Tot Non Food Month Exp
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  NF2X02
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+yxkit         Kitchen equipments
+yxhom         Home rep/maint.
+yxbed         Bedding/Towels etc.
+yxfurn        Furniture/Appliance
+yxshoe        Shoes
+yxclth        Clothes
+yxcmat        cloth materials.
+yxdoc         Dentists/Doctors/Nurses
+yxhfee        Hospital Fees
+yxmedsp       Medical Supplies
+yxtrad        Traditional Healer
+yxholi        Holidays
+yxlux         Luxury Goods
+flag          With Missing Values
+yxtot         Tot Non Food Yearly Exp
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  PSAMPLE4
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      :Cluster Number
+stat_reg      2:Statistical Region
+prov_cod      3:Province Code
+prov_nam      4:Province Name
+md_code       5:Magesterial District - Code
+md_name       6:Magesterial District - Name
+esd_name      7:ESD Name
+pop           8:Population
+type          9:Type
+survorg       10:Survey Organisation             survlist
+province      Province                           pro
+newprov       New Province                       npro
+md_ncode      New Magesterial Code
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+pro:
+             1 CAPE
+             2 NATAL
+             3 TRANSVAA
+             4 ORANGE F
+             5 KWA ZULU
+             6 KANGWANE
+             7 QWA-QWA
+             8 GAZANKUL
+             9 LEBOWA
+            10 KWANDEBE
+            11 TRANSKEI
+            12 BOPHUTHA
+            13 VENDA
+            14 CISKEI
+survlist:
+             1 01-HSRC
+             2 02-Trans
+             3 03-HSRC
+             4 04-DRA
+             5 05-SS
+             6 06-BMR
+             7 07-MD
+             8 08-Ciske
+             9 09-HSRC
+npro:
+             1 W.CAPE
+             2 N.CAPE
+             3 E.CAPE
+             4  NATAL
+             5 O.F.S.
+             6  E.TVL
+             7  N.TVL
+             8   N.W.
+             9 P.W.V.
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S0_AGR5
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+own_type      1a:Partnership ?
+prop          1b:Percentage of Farm
+field_va      2 :(1) Field crop products
+horticul      2 :(2) Value of hortic product
+animal        2 :(3) Value of animal products
+forestry      2 :(4) Forestry products
+other_in      2 :(5) Other farm income
+capital_      3 :(1) Capital expenses
+equip_co      3 :(2) Cost of new equipment
+bldg_cos      3 :(3) New building cost
+dev_cost      3 :(4) Development work
+other_co      3 :(5) Other expenses
+run_cost      3 :(6) Running cost
+perm_emp      4a:No of permanent workers
+seas_emp      4b:No of seasonal workers
+vehic_ow      5 :(1) Tractors other farm vehi
+mech_own      5 :(2) Mechanised farm equipmen
+other_ow      5 :(3) Other farm tools
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S0_AGRC
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      clustnum
+agr_cent      agricultural centre service
+dis_cent      distance of centre service
+agr_cntv      agricultural agent service visi
+agency1       farming agencies
+agency2       farming agencies
+srvces_1      service provided by agencies
+srvces_2      service provided by agencies
+srvces_3      service provided by agencies
+srvces_4      service provided by agencies
+co_ops        cooperative service
+coopser1      cooperative service code1
+coopser2      cooperative service code2
+coopser3      cooperative service code3
+coopser4      cooperative service code4
+tractors      number of tractors availability
+chem_fer      are fertilizers used?
+pesti         use insecticides or herbicides?
+rains         rain during the past twelve mon
+land          buy or sell land?
+sh_cropp      are there any sharecroppers?
+pr_shcro      sharecroppers proportion
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S1_AGR2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+milk_pro      3a:Litres milk last month
+milk_use      3b:Litres of milk used
+milk_sol      3c:Litres of milk sold
+milk_v_s      3d:Value of milk sold
+eggs_pro      4a:No of eggs produced
+eggs_use      4b:No of eggs used
+egg_q_so      4c:Qty eggs sold
+egg_v_so      4d:Value off eggs sold
+wool_sol      5 :Value of sale of wool
+skins_so      6 :Value of skins/hides sold
+vet_cost      7 :Cost of vet services
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S1_AGR3
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+subsidy_      3.1a:Subsidies or drought relie
+subs_val      3.1b:Value of subsidies
+services      3.2a:Services to other farmers
+serv_val      3.2b:Value of services to other
+other_in      3.3 :Other income from farming
+vehi_own      4.1a:Own tractors etc ?
+vehi_val      4.1b:Value of vehicles
+mech_own      4.2a:Own mechanised Equipment?
+mech_val      4.2b:Value of mechanised equip
+non_mech      4.3a:Own non mechanised equip
+non_mec1      4.3b:Value of non mech. equip
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S1_ED2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+bursary_      1a:Bursaries ?
+bursary1      1b:Value of bursaries
+meals_c       2a:Free school meals?
+meals_v       2b:Value of free meals
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S1_EDUC3
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+lit_prog      adult literacy programme
+prg_star      programme start
+prg_end       programme end
+men_atte      number of men attended
+wom_atte      number of women attended
+scl_pro1      schooling problem one
+scl_pro2      schooling problem two
+scl_pro3      schooling problem three
+scl_pro4      schooling problem four
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S1_HEAL1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+trb_atte      traditional birth attendant
+tba_dist      distance of traditional birth a
+hser_per      health services or personnel
+specify       specify services
+hlth_pr1      health problem one
+hlth_pr2      health problem two
+hlth_pr3      health problem three
+hlth_pr4      health problem four
+h_srvce1      health service one
+h_srvce2      health service two
+h_srvce3      health service three
+h_srvce4      health service four
+brth_pla      birth place in community
+imm_camp      immunisation campaign
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S3_DEMOG
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+date_b        date began
+date_c        date completed
+communit      type of community
+pop_gr_a      population group- a
+pop_gr_b      population group- b
+pop_gr_c      population group- c
+pop_gr_d      population group- d
+relign_a      religion- a
+relign_b      religion- b
+relign_c      religion- c
+relign_d      religion- d
+newpeple      people moved too or away from c
+homeless      homeless people
+number        amount of homeless people
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S3_ECON2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+pub_tran      6 : public transport
+tran_mod      7 : mode of transport
+distance      8 : distance of public transpor
+frequenc      9a: frequency code
+freq_num      9b: frequency number
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S3_EDUC2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+sec_schl      1 : secondary school
+ssch_num      2 : number of secondary school
+ssch_dis      3 : distance of secondary schoo
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S3_HSV2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+wsame         1 :Drinking + other water sourc    mostly
+wsource_      2 :Code:main water source          wsource_
+wsupply       3 :Get all water needed?           mostly
+wfetch        4 :Fetch water daily?
+wdist_c       5 :Code:distance to water          wdist
+wperson_      6a:Person 1 (fetch)
+wperson1      6a:Person 2 (fetch)
+wperson2      6a:Person 3 (fetch)
+wtrips_1      6c:Person 1:no of trips
+wtrips_2      6c:Person 2:no of trips
+wtrips_3      6c:Person 3:no of trips per
+wtime_1       6d:Person 1:time taken (min)
+wtime_2       6d:Person 2:time taken (min)
+wtime_3       6d:Person 3:time taken (min)
+wcarried      6e:Person 1:qty carried per
+wcarrie1      6e:Person 2:qty carried per
+wcarrie2      6e:Person 3:qty carried
+toilet_c      10a:Code:toilet type               toi_type
+toilloc_      11a:Code:location of toilet        toi_loc
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+mostly:
+             1 01-yes m
+             2 02-somet
+             3 03-no mo
+wsource_:
+             1 01-piped
+             2 02-piped
+             3 03-water
+             4 04-piped
+             5 05-piped
+             6 06-boreh
+             7 07-rainw
+             8 08-flowi
+             9 09-dam/s
+            10 10-well
+            11 11-prote
+            12 12-other
+wdist:
+             1 01-less
+             2 02-100m
+             3 03-500m
+             4 04-1km -
+             5 05-5km o
+toi_type:
+             1 01-flush
+             2 02-impro
+             3 03-other
+             4 04-bucke
+             5 05-chemi
+             6 06-none
+toi_loc:
+             1 01-insid
+             2 02-outsi
+             3 03-outsi
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S3_HSV3
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+connecte      1 :Connected to electricity sup
+cook_m        2a:Cooking:main source             ensource
+cook_s        2a:Cooking:second source           ensource
+light_m       2b:Lighting:main source            ensource
+light_s       2b:Lighting:second source          ensource
+heatw_m       2c:Heating-water:main source       ensource
+heatw_s       2c:Heating-water:second source     ensource
+heath_m       2d:Heating-home:main source        ensource
+heath_s       2d:Heating-home:second source      ensource
+wpcode_1      3b:Code:Person 1 (collects wood
+wpcode_2      3b:Code:Person 2 (collects wood
+wpcode_3      3b:Code:Person 3 (collects wood
+w_trips_      3c:Person 1:no of trips
+w_trips1      3c:Person 2:no of trips
+w_trips2      3c:Person 3:no of trips
+w_time_1      3d:Person 1:time taken
+w_time_2      3d:Person 2:time taken
+w_time_3      3d:Person 3:time taken
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+ensource:
+             1 01-wood
+             2 02-paraf
+             3 03-charc
+             4 04-elect
+             5 05-elect
+             6 06-candl
+             7 07-gas f
+             8 08-town
+             9 09-car b
+            10 10-dry b
+            11 11-dung
+            12 12-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S4_EDUC1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+pri_schl      1 : primary school
+psch_num      2 : number of primary school
+psch_dis      3 : distance of primary school
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S4_HDEF
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+q7a           7a:No of listing unit selected
+q7b           7b:Total Household per Unit
+q7c           7c:Sequantial No. per Unit
+visit         8 :Replace/original
+intcode1      9 :Interviewer 1 code
+intcode2      10 :Interviewer 2 code
+date1         11 :Date of visit 1
+date2         11 :Date of visit 2
+began1        12a:Time Visit1
+began2        12b:Time Visit
+anthrcod      14 :Anthropometrist Code
+supcode       16 :Supervisor code
+verified      16 :Verified by supervisor
+race          19 :Population Group               race
+gender        20 :Gender
+lang_cod      21 :Language code                  lang_cod
+dummy_da      SS :Date of Capture
+year1         Date year1
+month1        Date month1
+day1          Date day1
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+race:
+             1 01-afric
+             2 02-colou
+             3 03-india
+             4 04-white
+             5 05-other
+lang_cod:
+             1 01-engli
+             2 02-afrik
+             3 03-xhosa
+             4 04-zulu
+             5 05-tswan
+             6 06-north
+             7 07-south
+             8 08-venda
+             9 09-shang
+            10 10-swazi
+            11 11-ndebe
+            12 12-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S4_HSV1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+house_c       1 :Code:Type of house              house_c
+roof1_c       2a:Code:1st roof material          material
+roof2_c       2a:Code:2nd roof material          material
+roof3_c       2a:Code:3rd roof material          material
+wall1_c       2b:Code:1st wall material          material
+wall2_c       2b:Code:2nd wall material          material
+wall3_c       2b:Code:3rd wall material          material
+floor1_c      2c:Code:1st floor material         material
+floor2_c      2c:Code:2nd floor material         material
+floor3_c      2c:Code:3rd floor material         material
+rooms_to      3 :Total no of rooms
+rooms_oc      4 :No of rooms used
+ownship_      5 :Ownership
+bond          6 :Bonded or loan?
+bond_owe      7 :Amt owed on bond or loan
+sale_val      8 :Resale value of house
+pay_rent      9a:Pay rent (Y/N)?
+rent_act      9b:Monthly rent (actual)
+rent_mkt      9c:Monthly rent (mkt)
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+house_c:
+             1 01-shack
+             2 02-house
+             3 03-tradi
+             4 04-maiso
+             5 05-flat
+             6 06-hoste
+             7 07-outbu
+             8 08-combi
+             9 09-other
+material:
+             1 01-brick
+             2 02-cemen
+             3 03-pre-f
+             4 04-corru
+             5 05-wood
+             6 06-plast
+             7 07-cardb
+             8 08-mixtu
+             9 09-wattl
+            10 10-tile
+            11 11-carpe
+            12 12-linol
+            13 13-mud
+            14 14-thatc
+            15 15-asbes
+            16 16-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S4_LAND1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          :Household number
+ownland1      1a:Crop land ownerhip type
+ownsh_c       1b:Crop land ownerhip type         landown
+ownland2      2a:Graze land ownership type
+ownsh_g       2b:Graze land ownership type       landown
+land_use      3 :Land use                        sprop
+crop_siz      4 :Use of land for crops
+crop_use      5a:Crops:land use last year        cprop
+crop_us1      5b:Crops:land use in 1993          cprop
+water_s1      6a:Crops: water source (1)         cirrig
+water_s2      6a:Crops:water source (2)          cirrig
+water_s3      6a:Crops:water source (3)          cirrig
+water_mc      6b:Main source of water            cirrig
+irrig_cr      6c:Irrigation for crops            cprop
+sell_lan      7 :Crops:rights to sell land
+sell_siz      8a:Crops:size of saleable land
+sell_val      8b:Crops:value of saleable land
+rent_toc      9a:Crops:rent land to others
+rent_rec      9b:Crops:rent received
+rent_frc      10a:Crops:rent land from others
+rent_pai      10b:Crops:rent paid
+water_s4      11a:Grazing:water source (2)
+water_s5      11a:Grazing:water source(1)
+water_s6      11a:Grazing:water source(3)
+water_mg      11b:Grazing: main water source     cirrig
+sell_la1      12a:Grazing-rights to sell
+sell_si1      12b:Grazing:size of saleable la
+sell_va1      12c:Grazing:value of saleable l
+rent_tog      13a:Grazing:rent land to others
+rent_re1      13b:Grazing:rent received
+rent_frg      14a:Grazing:rent land from othe
+rent_pa1      14b Grazing:rent paid
+same          Same Household ?
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+cirrig:
+             1 01-river
+             2 02-dam
+             3 03-boreh
+             4 04-tank
+             5 05-munci
+             6 06-rain
+             7 07-neigh
+             8 08-other
+cprop:
+             1 01-less
+             2 02-half
+             3 03-more
+             4 04-all
+             5 05-none
+sprop:
+             1 01-crops
+             2 02-mst c
+             3 03-half
+             4 04-mst g
+             5 05-grazi
+landown:
+             1 01-commu
+             2 02-priva
+             3 03-priva
+             4 04-other
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S5_ECON1
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      cluster number
+eco_act1      1a: economic activity- one
+eco_act2      1b: economic activity- two
+eco_act3      1c: economic activity- three
+eco_act4      1d: economic activity- four
+roads         2 : tarred or dirt roads
+road_imp      3 : impassable roads
+duration      4 : duration of impassable road
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  S5_PQL
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+resp_cod      :Person code of respondent
+satisfie      1 :Level of satisfaction           satisfy
+choice1_      3a:Code:1st choice                 choice_c
+choice11      3a:Rank 1
+choice2_      3b:Code:2nd choice                 choice_c
+choice21      3b:Rank 2
+choice3_      3c:Code:3rd choice                 choice_c
+choice31      3c:RANK 3
+safety_h      4 :Safety inside home              safety
+safety_o      5 :Safety outside home             safety
+crime_q       6a:Victim of crime
+c_assaul      6b:(1) Assault
+c_robber      6b:(2) Robbery
+c_rape        6b:(3) Rape
+c_murder      6b:(4) Murder
+c_abdcti      6b:(5) Abduction
+c_other       6b:(6) Other
+parents_      7 :Compared with parents           richpoor
+new_govt      8 :Effect of new government        newgovt
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+satisfy:
+             1 01-v sat
+             2 02-satis
+             3 03-neith
+             4 04-dissa
+             5 05-v dis
+choice_c:
+             1 01-jobs
+             2 02-schoo
+             3 03-train
+             4 04-clini
+             5 05-roads
+             6 06-elect
+             7 07-housi
+             8 08-sanit
+             9 09-piped
+            10 10-food
+            11 11-trans
+            12 12-sport
+            13 13-libra
+            14 14-cinem
+            15 15-banks
+            16 16-shops
+            17 17-peace
+            18 18-polit
+            19 19-other
+            20 20-wages
+            21 21-taxes
+            22 22-infla
+            23 23-socia
+            24 24-utili
+            25 25-recre
+            26 26-law &
+            27 27-telec
+safety:
+             1 01-more
+             2 02-less
+             3 03-the s
+richpoor:
+             1 01-riche
+             2 02-same
+             3 03-poore
+newgovt:
+             1 01-bette
+             2 02-same
+             3 03-worse
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  SAMPLE04
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+clustnum      :Cluster Number
+pop           8:Population
+type          9:Type
+metro         Metro - Urban - Rural              metro
+survorg       10:Survey Organisation             survlist
+province      Province                           pro
+newprov       New Province                       npro
+md_ncode      New Magesterial Code
+hhnump        Total number of People
+hhnumr        Total number of Residents
+hhall         Total number of Households
+hhres         Total number of Resident Househ
+avsizep       Average Household Size All
+avsizer       Average Household Size Resident
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+metro:
+             1 Rural
+             2 Urban
+             3 Metro
+pro:
+             1 CAPE
+             2 NATAL
+             3 TRANSVAA
+             4 ORANGE F
+             5 KWA ZULU
+             6 KANGWANE
+             7 QWA-QWA
+             8 GAZANKUL
+             9 LEBOWA
+            10 KWANDEBE
+            11 TRANSKEI
+            12 BOPHUTHA
+            13 VENDA
+            14 CISKEI
+survlist:
+             1 01-HSRC
+             2 02-Trans
+             3 03-HSRC
+             4 04-DRA
+             5 05-SS
+             6 06-BMR
+             7 07-MD
+             8 08-Ciske
+             9 09-HSRC
+npro:
+             1 W.CAPE
+             2 N.CAPE
+             3 E.CAPE
+             4  NATAL
+             5 O.F.S.
+             6  E.TVL
+             7  N.TVL
+             8   N.W.
+             9 P.W.V.
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  STRATA2
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+hhid          Household identification No
+race          19 :Population Group               race
+lang_cod      21 :Language code                  lang_cod
+type          9:Type
+metro         Metro - Urban - Rural              metro
+province      Province                           pro
+newprov       New Province                       npro
+sweight       Enumeration Weights
+rsweight      Enumeration Raised Weights
+rcweight      Census Reaised Weights
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+npro:
+             1 W.CAPE
+             2 N.CAPE
+             3 E.CAPE
+             4  NATAL
+             5 O.F.S.
+             6  E.TVL
+             7  N.TVL
+             8   N.W.
+             9 P.W.V.
+metro:
+             1 Rural
+             2 Urban
+             3 Metro
+lang_cod:
+             1 01-engli
+             2 02-afrik
+             3 03-xhosa
+             4 04-zulu
+             5 05-tswan
+             6 06-north
+             7 07-south
+             8 08-venda
+             9 09-shang
+            10 10-swazi
+            11 11-ndebe
+            12 12-other
+race:
+             1 01-afric
+             2 02-colou
+             3 03-india
+             4 04-white
+             5 05-other
+pro:
+             1 CAPE
+             2 NATAL
+             3 TRANSVAA
+             4 ORANGE F
+             5 KWA ZULU
+             6 KANGWANE
+             7 QWA-QWA
+             8 GAZANKUL
+             9 LEBOWA
+            10 KWANDEBE
+            11 TRANSKEI
+            12 BOPHUTHA
+            13 VENDA
+            14 CISKEI
+
+
+
+
+  *---------------------------------------------------------------
+  *         VARIABLE LABELS AND LABEL VALUES FOR  WEIGHT02
+  *---------------------------------------------------------------
+
+*****************************************************************
+Variable      Variable Label                     Label Name
+*****************************************************************
+
+
+province
+race
+popcens       Census Population
+hhenum        Enumeration Number of Household
+popenum       Enumeration Number of raised In
+hhnum         Number of Actual Households
+popobt        Number of Actual Raised Individ
+sweight       Enumeration Weights
+rsweight      Enumeration Raised Weights
+cweight       Census Weights
+rcweight      Census Reaised Weights
+
+
+*****************************************************************
+Label Name  Label Codes
+*****************************************************************
+
+
+
+
+
